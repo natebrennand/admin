@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+// AdminPortString is the string respresentation of the port that the /ping endpoint will listen on.
 var AdminPortString string
 
 func init() {
