@@ -27,3 +27,10 @@ func TestHealthchck(t *testing.T) {
 		t.Fatal(`admin healthcheck should return "pong"`)
 	}
 }
+
+func TestStatsgeneration(t *testing.T) {
+	stats := buildProfile()
+	if stats.Allocation == 0 {
+		t.Error("Bytes should be allocated")
+	}
+}
